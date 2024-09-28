@@ -1,0 +1,27 @@
+public class SequentialSearch {
+    public static int SequentialSearch(int[] list, int target) {
+      
+        for (int index = 0; index < list.length; index++) {
+        	
+            if (list[index] == target) { 
+            	
+                return index;  
+            }
+        }
+        return -1;  
+    }
+
+    public static void main(String[] args) {
+    	
+        int[] list = {10, 20, 30, 40, 50};  
+        
+        int target = 10;  
+
+        int result = SequentialSearch(list, target);  
+        if (result != -1) {
+            System.out.println("Found target at index: " + result); 
+        } else {
+            System.out.println("Target not found");  
+        }
+    }
+}
