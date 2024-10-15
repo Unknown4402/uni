@@ -1,0 +1,29 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] List = {64, 34, 25, 12, 22, 11, 90};
+        bubbleSort(List);
+
+        for (int i = 0; i < List.length; i++) {
+            System.out.print(List[i] + " ");
+        }
+     }
+
+  
+    static void bubbleSort(int[] List) {
+        int temp;
+        int size = List.length;
+
+        for (int i = 0; i < size - 1; i++) {
+        	
+            for (int j = 0; j < size - (i + 1); j++) {
+            	
+                if (List[j] > List[j + 1]) {
+                    
+                    temp = List[j];
+                    List[j] = List[j + 1];
+                    List[j + 1] = temp;
+                }
+            }
+        }
+       }
+       }
