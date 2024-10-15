@@ -1,0 +1,28 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] List = {64, 34, 25, 12, 22, 11, 90};
+        selectionSort(List);
+
+        for (int i = 0; i < List.length; i++) {
+            System.out.print(List[i] + " ");
+        }
+    }
+
+    static void selectionSort(int[] List) {
+        int temp, min;
+        int size = List.length;
+
+        for (int i = 0; i < size - 1; i++) {
+            min = i;
+            for (int j = i + 1; j < size; j++) {
+                if (List[j] < List[min]) {
+                    min = j;  
+                }
+            }
+           
+            temp = List[min];
+            List[min] = List[i];
+            List[i] = temp;
+        }
+    }
+}
